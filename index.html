@@ -18,12 +18,17 @@
             overflow: hidden;
             transition: max-height 0.3s ease;
         }
+        @media (max-width: 768px) {
+        header {
+            background-size: contain; /* Зображення буде повністю вміщуватися, без обрізки */
+            background-position: top center; /* Позиція фону змінена, щоб краще відображати важливі частини на мобільних екранах */
+        }
+    }
     </style>
 </head>
 
 <body class="bg-purple-50 font-sans" style="font-family: 'Montserrat', serif;">
 
-    <!-- Головна сторінка -->
     <header class="bg-gradient-to-b from-purple-50 to-purple-100 text-white text-center py-16 flex flex-col items-center justify-center" style="min-height: 100vh; margin-bottom: 10%; background-image: url('assets/snapedit_1734965636140.png'); background-size: cover; background-position: center;" data-aos="fade-down">
         <!-- Соціальні іконки -->
         <div class="flex space-x-8 mb-6">
@@ -37,15 +42,15 @@
                 <i class="fas fa-envelope text-3xl"></i>
             </a>
         </div>
-
+    
         <!-- Основний контент -->
         <h1 class="text-5xl font-extrabold animate__animated animate__bounceIn mb-6">Марафон: Твоя перша зміна за 10 днів!</h1>
         <div class="mt-4">
             <span class="text-3xl font-semibold">До старту продажу:</span>
             <div id="countdown" class="text-2xl mt-2 font-bold text-yellow-400"></div>
         </div>
-        <button class="bg-purple-600 hover:bg-purple-500 text-white font-bold py-3 px-8 mt-8 rounded-lg transform hover:scale-110 transition-all duration-300">
-            Дізнайтесь про старт продажів у додатку TGYM
+        <button class="bg-purple-600 hover:bg-purple-400 text-white font-bold py-3 px-8 mt-8 rounded-lg transform hover:scale-110 transition-all duration-300 w-full sm:w-auto opacity-90 hover:opacity-100">
+            Дізнайтесь про старт продажів у додатку
         </button>
     </header>
 
@@ -110,7 +115,7 @@
     <section class="py-16 px-6 bg-purple-50" data-aos="zoom-in" style="margin: 10% 0">
         <h2 class="text-4xl font-bold text-center text-purple-800">Статистика</h2>
         
-        <div class="flex justify-around mt-8">
+        <div class="flex flex-col md:flex-row justify-around mt-8 space-y-8 md:space-y-0">
             <!-- Статистика учасників -->
             <div class="text-center">
                 <p class="text-4xl font-bold text-purple-700 animate__animated animate__fadeInLeft">
@@ -241,44 +246,45 @@
 
     
 
-    <!-- Інструкція з участі -->
     <section class="py-16 px-6 bg-gradient-to-r from-purple-100 via-purple-200 to-purple-100" data-aos="flip-up" style="margin: 10% 0;">
-        <h2 class="text-5xl font-bold text-center text-purple-800 animate__animated animate__fadeInDown">Інструкція з участі</h2>
-        <div class="max-w-4xl mx-auto mt-12">
-            <ol class="space-y-12 text-purple-700 text-lg">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-purple-800 animate__animated animate__fadeInDown">Інструкція з участі</h2>
+        <div class="max-w-full sm:max-w-3xl lg:max-w-4xl mx-auto mt-12">
+            <ol class="space-y-8 sm:space-y-10 lg:space-y-12 text-purple-700 text-base sm:text-lg">
                 <!-- Крок 1 -->
-                <li class="flex items-start bg-white p-6 rounded-lg shadow-lg animate__animated animate__fadeInLeft animate__delay-1s">
-                    <div class="w-16 h-16 flex items-center justify-center bg-purple-600 text-white text-3xl font-bold rounded-full mr-6">
+                <li class="flex items-start bg-white p-4 sm:p-6 rounded-lg shadow-lg animate__animated animate__fadeInLeft animate__delay-1s">
+                    <div class="w-12 sm:w-16 h-12 sm:h-16 flex items-center justify-center bg-purple-600 text-white text-2xl sm:text-3xl font-bold rounded-full mr-4 sm:mr-6">
                         1
                     </div>
                     <div>
-                        <h3 class="text-2xl font-bold text-purple-800">Обрати бажаний формат участі</h3>
-                        <p class="mt-2 text-purple-600">Виберіть той формат, який найкраще підходить для вас, враховуючи ваші цілі та зручність.</p>
+                        <h3 class="text-xl sm:text-2xl font-bold text-purple-800">Обрати бажаний формат участі</h3>
+                        <p class="mt-2 text-purple-600 text-sm sm:text-base">Виберіть той формат, який найкраще підходить для вас, враховуючи ваші цілі та зручність.</p>
                     </div>
                 </li>
                 <!-- Крок 2 -->
-                <li class="flex items-start bg-white p-6 rounded-lg shadow-lg animate__animated animate__fadeInUp animate__delay-2s">
-                    <div class="w-16 h-16 flex items-center justify-center bg-purple-600 text-white text-3xl font-bold rounded-full mr-6">
+                <li class="flex items-start bg-white p-4 sm:p-6 rounded-lg shadow-lg animate__animated animate__fadeInUp animate__delay-2s">
+                    <div class="w-12 sm:w-16 h-12 sm:h-16 flex items-center justify-center bg-purple-600 text-white text-2xl sm:text-3xl font-bold rounded-full mr-4 sm:mr-6">
                         2
                     </div>
                     <div>
-                        <h3 class="text-2xl font-bold text-purple-800">Оплатити реєстрацію онлайн</h3>
-                        <p class="mt-2 text-purple-600">Швидка і зручна оплата через будь-який зручний для вас спосіб.</p>
+                        <h3 class="text-xl sm:text-2xl font-bold text-purple-800">Оплатити реєстрацію онлайн</h3>
+                        <p class="mt-2 text-purple-600 text-sm sm:text-base">Швидка і зручна оплата через будь-який зручний для вас спосіб.</p>
                     </div>
                 </li>
                 <!-- Крок 3 -->
-                <li class="flex items-start bg-white p-6 rounded-lg shadow-lg animate__animated animate__fadeInRight animate__delay-3s">
-                    <div class="w-16 h-16 flex items-center justify-center bg-purple-600 text-white text-3xl font-bold rounded-full mr-6">
+                <li class="flex items-start bg-white p-4 sm:p-6 rounded-lg shadow-lg animate__animated animate__fadeInRight animate__delay-3s">
+                    <div class="w-12 sm:w-16 h-12 sm:h-16 flex items-center justify-center bg-purple-600 text-white text-2xl sm:text-3xl font-bold rounded-full mr-4 sm:mr-6">
                         3
                     </div>
                     <div>
-                        <h3 class="text-2xl font-bold text-purple-800">Отримати програму тренувань і харчування</h3>
-                        <p class="mt-2 text-purple-600">Отримайте повний план, який допоможе вам досягти бажаних результатів.</p>
+                        <h3 class="text-xl sm:text-2xl font-bold text-purple-800">Отримати програму тренувань і харчування</h3>
+                        <p class="mt-2 text-purple-600 text-sm sm:text-base">Отримайте повний план, який допоможе вам досягти бажаних результатів.</p>
                     </div>
                 </li>
             </ol>
         </div>
     </section>
+    
+    
 
     <!-- Секція запису на марафон -->
     <section class="py-16 px-6 bg-gradient-to-r from-purple-100 via-purple-200 to-purple-100 text-purple-800" data-aos="fade-up" style="margin: 10% 0;">
@@ -324,28 +330,27 @@
         </div>
     </section>
 
-    <!-- Секція оплати -->
     <section class="py-16 px-6 bg-purple-50" data-aos="fade-up">
         <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-3xl font-bold text-purple-800 mb-6">Оплата за участь у марафоні</h2>
-            <p class="text-xl text-purple-700 mb-8">Оплатіть участь у марафоні та отримайте доступ до програми. Вартість: 10 € (або 425 грн).</p>
-
+            <h2 class="text-3xl sm:text-4xl font-bold text-purple-800 mb-6">Оплата за участь у марафоні</h2>
+            <p class="text-xl sm:text-2xl text-purple-700 mb-8">Оплатіть участь у марафоні та отримайте доступ до програми. Вартість: 10 € (або 425 грн).</p>
+    
             <!-- Форми оплати -->
-            <div class="flex justify-center space-x-8">
+            <div class="flex flex-col sm:flex-row justify-center space-y-8 sm:space-y-0 sm:space-x-8">
                 <!-- Картка -->
-                <div class="bg-white p-8 rounded-lg shadow-lg w-full md:w-96">
+                <div class="bg-white p-8 rounded-lg shadow-lg w-full sm:w-96">
                     <h3 class="text-2xl font-semibold text-purple-800 mb-4">Оплата карткою</h3>
                     <form action="#" method="POST">
                         <div class="mb-4">
                             <label for="cardNumber" class="block text-sm text-purple-600">Номер картки</label>
                             <input type="text" id="cardNumber" name="cardNumber" placeholder="XXXX XXXX XXXX XXXX" class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500" required>
                         </div>
-                        <div class="mb-4 flex space-x-4">
-                            <div class="w-1/2">
+                        <div class="mb-4 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                            <div class="w-full sm:w-1/2">
                                 <label for="expiryDate" class="block text-sm text-purple-600">Термін дії</label>
                                 <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500" required>
                             </div>
-                            <div class="w-1/2">
+                            <div class="w-full sm:w-1/2">
                                 <label for="cvv" class="block text-sm text-purple-600">CVV</label>
                                 <input type="text" id="cvv" name="cvv" placeholder="XXX" class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500" required>
                             </div>
@@ -353,20 +358,21 @@
                         <button type="submit" class="w-full bg-purple-600 hover:bg-purple-500 text-white font-bold py-3 px-6 rounded-lg transform hover:scale-105 transition-all duration-300">Оплатити</button>
                     </form>
                 </div>
-
+    
                 <!-- Інші методи оплати -->
-                <div class="bg-white p-8 rounded-lg shadow-lg w-full md:w-96">
+                <div class="bg-white p-8 rounded-lg shadow-lg w-full sm:w-96">
                     <h3 class="text-2xl font-semibold text-purple-800 mb-4">Інші методи оплати</h3>
                     <ul class="space-y-4 text-left">
-                        <li class="text-lg text-purple-600">1. Приват24</li>
-                        <li class="text-lg text-purple-600">2. PayPal</li>
-                        <li class="text-lg text-purple-600">3. Оплата через термінал</li>
+                        <li class="text-lg text-purple-600 hover:text-purple-800 transition duration-200">1. Приват24</li>
+                        <li class="text-lg text-purple-600 hover:text-purple-800 transition duration-200">2. PayPal</li>
+                        <li class="text-lg text-purple-600 hover:text-purple-800 transition duration-200">3. Оплата через термінал</li>
                     </ul>
                     <p class="text-sm text-gray-500 mt-4">Виберіть метод оплати, щоб продовжити.</p>
                 </div>
             </div>
         </div>
     </section>
+    
 
 
     <!-- Секція Питання та Відповіді -->
