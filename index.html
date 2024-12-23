@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Марафон</title>
+    <!-- Шрифт -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <style>
+        .answer {
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+    </style>
+</head>
+
+<body class="bg-purple-50 font-sans" style="font-family: 'Montserrat', serif;">
+
+    <!-- Головна сторінка -->
+    <header class="bg-gradient-to-b from-purple-50 to-purple-100 text-white text-center py-16 flex flex-col items-center justify-center" style="min-height: 100vh; margin-bottom: 10%; background-image: url('assets/snapedit_1734965636140.png'); background-size: cover; background-position: center;" data-aos="fade-down">
+        <!-- Соціальні іконки -->
+        <div class="flex space-x-8 mb-6">
+            <a href="https://www.instagram.com" target="_blank" class="text-white hover:text-purple-300 transform hover:scale-125 transition-all duration-300">
+                <i class="fab fa-instagram text-3xl"></i>
+            </a>
+            <a href="https://www.facebook.com" target="_blank" class="text-white hover:text-purple-300 transform hover:scale-125 transition-all duration-300">
+                <i class="fab fa-facebook text-3xl"></i>
+            </a>
+            <a href="mailto:info@tgym.com" class="text-white hover:text-purple-300 transform hover:scale-125 transition-all duration-300">
+                <i class="fas fa-envelope text-3xl"></i>
+            </a>
+        </div>
+
+        <!-- Основний контент -->
+        <h1 class="text-5xl font-extrabold animate__animated animate__bounceIn mb-6">Марафон: Твоя перша зміна за 10 днів!</h1>
+        <div class="mt-4">
+            <span class="text-3xl font-semibold">До старту продажу:</span>
+            <div id="countdown" class="text-2xl mt-2 font-bold text-yellow-400"></div>
+        </div>
+        <button class="bg-purple-600 hover:bg-purple-500 text-white font-bold py-3 px-8 mt-8 rounded-lg transform hover:scale-110 transition-all duration-300">
+            Дізнайтесь про старт продажів у додатку TGYM
+        </button>
+    </header>
+
+
+
+    <!-- Інформація про засновника -->
+    <section class="py-16 px-6 bg-gradient-to-b from-purple-50 to-purple-100" data-aos="fade-up" style="margin: 10% 0;">
+        <div class="flex flex-col md:flex-row items-center md:items-start md:space-x-12 max-w-6xl mx-auto">
+            <!-- Зображення -->
+            <div class="flex-shrink-0">
+                <img src="assets/IMAGE 2024-12-23 11:32:54.jpg" alt="Наталья Боровая" class="rounded-full mx-auto md:mx-0 shadow-lg border-4 border-purple-200" style="width: 300px; height: 300px; object-fit: cover;">
+            </div>
+            <!-- Текст -->
+            <div class="mt-6 md:mt-0">
+                <h2 class="text-5xl font-bold text-center md:text-left text-purple-800 leading-tight animate__animated animate__fadeInDown">
+                    Про засновника
+                </h2>
+                <p class="text-lg text-purple-700 text-center md:text-left mt-6 max-w-3xl mx-auto leading-relaxed animate__animated animate__fadeInUp animate__delay-1s">
+                    Привіт! Я <strong>Наталья Боровая</strong>, тренер з багаторічним досвідом. Я створила цей марафон, щоб допомогти людям досягти своїх фітнес-цілей. Разом ми подолаємо труднощі та станемо краще!
+                </p>
+                <p class="text-lg text-purple-700 text-center md:text-left mt-6 max-w-3xl mx-auto leading-relaxed animate__animated animate__fadeInUp animate__delay-2s">
+                    Це буде короткий 10-тиденний марафон "<strong>Похудей за 10 дней</strong>". У марафоні будуть тренування та програма харчування, які допоможуть вам досягти видимих результатів.
+                </p>
+            </div>
+        </div>
+
+        <!-- Переваги після марафону -->
+        <div class="mt-16">
+            <h3 class="text-4xl font-bold text-center text-purple-800 animate__animated animate__fadeInDown">Переваги після проходження марафону</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+                <!-- Перевага 1 -->
+                <div class="bg-white p-8 rounded-lg shadow-lg text-center transform hover:scale-105 transition-transform duration-300">
+                    <i class="fas fa-heart text-6xl text-purple-600 mb-4"></i>
+                    <h4 class="text-xl font-semibold text-purple-700">Покращення фізичної форми</h4>
+                    <p class="text-purple-600 mt-4">Відчуйте більше енергії та фізичну готовність завдяки тренуванням та збалансованому харчуванню.</p>
+                </div>
+                <!-- Перевага 2 -->
+                <div class="bg-white p-8 rounded-lg shadow-lg text-center transform hover:scale-105 transition-transform duration-300">
+                    <i class="fas fa-weight text-6xl text-purple-600 mb-4"></i>
+                    <h4 class="text-xl font-semibold text-purple-700">Зниження ваги</h4>
+                    <p class="text-purple-600 mt-4">За 10 днів ви зможете побачити перші результати від програми харчування та тренувань.</p>
+                </div>
+                <!-- Перевага 3 -->
+                <div class="bg-white p-8 rounded-lg shadow-lg text-center transform hover:scale-105 transition-transform duration-300">
+                    <i class="fas fa-smile text-6xl text-purple-600 mb-4"></i>
+                    <h4 class="text-xl font-semibold text-purple-700">Покращення настрою</h4>
+                    <p class="text-purple-600 mt-4">Фізична активність та здорове харчування зроблять вас впевненішими та щасливішими.</p>
+                </div>
+                <!-- Перевага 4 -->
+                <div class="bg-white p-8 rounded-lg shadow-lg text-center transform hover:scale-105 transition-transform duration-300">
+                    <i class="fas fa-apple-alt text-6xl text-purple-600 mb-4"></i>
+                    <h4 class="text-xl font-semibold text-purple-700">Здорові звички</h4>
+                    <p class="text-purple-600 mt-4">Навчіться правильно харчуватися та тренуватися, щоб зберегти результат надовго.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+   
+    <!-- Статистика -->
+    <section class="py-16 px-6 bg-purple-50" data-aos="zoom-in" style="margin: 10% 0">
+        <h2 class="text-4xl font-bold text-center text-purple-800">Статистика</h2>
+        
+        <div class="flex justify-around mt-8">
+            <!-- Статистика учасників -->
+            <div class="text-center">
+                <p class="text-4xl font-bold text-purple-700 animate__animated animate__fadeInLeft">
+                    10 000+
+                </p>
+                <p class="text-purple-600">Учасників</p>
+            </div>
+
+            <!-- Статистика успішних історій -->
+            <div class="text-center">
+                <p class="text-4xl font-bold text-purple-700 animate__animated animate__fadeInUp">
+                    8 500
+                </p>
+                <p class="text-purple-600">Успішних історій</p>
+            </div>
+
+            <!-- Статистика задоволених результатами -->
+            <div class="text-center">
+                <p class="text-4xl font-bold text-purple-700 animate__animated animate__fadeInRight">
+                    95%
+                </p>
+                <p class="text-purple-600">Задоволених результатами</p>
+            </div>
+        </div>
+    </section>  
+
+    <!-- Опис марафону -->
+    <!-- <section class="py-16 px-6 bg-gradient-to-r from-purple-50 via-white to-purple-50" data-aos="fade-up" style="margin: 10% 0">
+        <h2 class="text-4xl font-bold text-center text-purple-800 animate__animated animate__fadeInDown">Що очікує учасників</h2>
+        <p class="text-xl text-purple-700 text-center mt-4 animate__animated animate__fadeInUp animate__delay-1s">
+            Учасники марафону отримають повний комплекс для досягнення своїх цілей!
+        </p>
+        <div class="mt-12 max-w-3xl mx-auto">
+            <ul class="space-y-8">
+               
+                <li class="flex items-start bg-white shadow-lg p-6 rounded-lg transform hover:scale-105 transition-transform duration-300 animate__animated animate__fadeInLeft">
+                    <i class="fas fa-running text-4xl text-purple-600 mr-6"></i>
+                    <div>
+                        <h4 class="text-xl font-semibold text-purple-700">Програма домашніх тренувань</h4>
+                        <p class="text-purple-600 mt-2">На чотири тижні, з детальними інструкціями та відео-супроводом.</p>
+                    </div>
+                </li>
+                
+                <li class="flex items-start bg-white shadow-lg p-6 rounded-lg transform hover:scale-105 transition-transform duration-300 animate__animated animate__fadeInRight">
+                    <i class="fas fa-utensils text-4xl text-purple-600 mr-6"></i>
+                    <div>
+                        <h4 class="text-xl font-semibold text-purple-700">Режим збалансованого харчування</h4>
+                        <p class="text-purple-600 mt-2">Смачні рецепти та розраховані порції для досягнення оптимальних результатів.</p>
+                    </div>
+                </li>
+               
+                <li class="flex items-start bg-white shadow-lg p-6 rounded-lg transform hover:scale-105 transition-transform duration-300 animate__animated animate__fadeInUp">
+                    <i class="fas fa-lightbulb text-4xl text-purple-600 mr-6"></i>
+                    <div>
+                        <h4 class="text-xl font-semibold text-purple-700">Щоденні поради та мотивація</h4>
+                        <p class="text-purple-600 mt-2">Підтримка від тренера та спільноти для досягнення найкращих результатів.</p>
+                    </div>
+                </li>
+                
+                <li class="flex items-start bg-white shadow-lg p-6 rounded-lg transform hover:scale-105 transition-transform duration-300 animate__animated animate__fadeInDown">
+                    <i class="fas fa-trophy text-4xl text-purple-600 mr-6"></i>
+                    <div>
+                        <h4 class="text-xl font-semibold text-purple-700">Змагання за грошові призи</h4>
+                        <p class="text-purple-600 mt-2">Мотивуючі нагороди для найкращих учасників марафону.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section> -->
+
+    <!-- Інформація про марафон -->
+    <section class="py-16 px-6 bg-gradient-to-r from-purple-100 via-purple-200 to-purple-100" data-aos="fade-up" style="margin: 10% 0;">
+        <h2 class="text-5xl font-bold text-center text-purple-800 animate__animated animate__fadeInDown">Що на тебе чекає в марафоні</h2>
+        <p class="text-xl text-purple-700 text-center mt-4 animate__animated animate__fadeInUp animate__delay-1s">
+            Відкрий для себе всі переваги нашої програми та зроби перший крок до ідеального результату!
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mt-12 max-w-6xl mx-auto">
+            <!-- Пункт 1 -->
+            <div class="bg-white p-8 rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300 animate__animated animate__fadeInLeft">
+                <div class="text-center">
+                    <i class="fas fa-dumbbell text-6xl text-purple-600"></i>
+                    <h4 class="text-2xl font-semibold text-purple-700 mt-6">Індивідуальний підхід</h4>
+                    <p class="text-purple-600 mt-4">Тренування та харчування, підібрані під твої особисті потреби та цілі.</p>
+                </div>
+            </div>
+            <!-- Пункт 2 -->
+            <div class="bg-white p-8 rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300 animate__animated animate__fadeInUp">
+                <div class="text-center">
+                    <i class="fas fa-clipboard-list text-6xl text-purple-600"></i>
+                    <h4 class="text-2xl font-semibold text-purple-700 mt-6">Чітка програма</h4>
+                    <p class="text-purple-600 mt-4">Повна програма тренувань і харчування на 10 днів для досягнення швидких результатів.</p>
+                </div>
+            </div>
+            <!-- Пункт 3 -->
+            <div class="bg-white p-8 rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300 animate__animated animate__fadeInRight">
+                <div class="text-center">
+                    <i class="fas fa-heart text-6xl text-purple-600"></i>
+                    <h4 class="text-2xl font-semibold text-purple-700 mt-6">Мотивація на кожному кроці</h4>
+                    <p class="text-purple-600 mt-4">Ми будемо підтримувати тебе на кожному етапі марафону для досягнення результатів.</p>
+                </div>
+            </div>
+            <!-- Пункт 4 -->
+            <div class="bg-white p-8 rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300 animate__animated animate__fadeInLeft">
+                <div class="text-center">
+                    <i class="fas fa-utensils text-6xl text-purple-600"></i>
+                    <h4 class="text-2xl font-semibold text-purple-700 mt-6">Збалансоване харчування</h4>
+                    <p class="text-purple-600 mt-4">Програма харчування, що допоможе досягти результатів без голодувань.</p>
+                </div>
+            </div>
+            <!-- Пункт 5 -->
+            <div class="bg-white p-8 rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300 animate__animated animate__fadeInUp">
+                <div class="text-center">
+                    <i class="fas fa-check-circle text-6xl text-purple-600"></i>
+                    <h4 class="text-2xl font-semibold text-purple-700 mt-6">Помітні результати</h4>
+                    <p class="text-purple-600 mt-4">За 10 днів ти побачиш реальні зміни у своєму тілі та самопочутті.</p>
+                </div>
+            </div>
+            <!-- Пункт 6 -->
+            <div class="bg-white p-8 rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300 animate__animated animate__fadeInRight">
+                <div class="text-center">
+                    <i class="fas fa-trophy text-6xl text-purple-600"></i>
+                    <h4 class="text-2xl font-semibold text-purple-700 mt-6">Нагороди для переможців</h4>
+                    <p class="text-purple-600 mt-4">Змагайся за грошові призи та отримуй додаткову мотивацію для досягнення результатів.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Інструкція з участі -->
+    <section class="py-16 px-6 bg-gradient-to-r from-purple-100 via-purple-200 to-purple-100" data-aos="flip-up" style="margin: 10% 0;">
+        <h2 class="text-5xl font-bold text-center text-purple-800 animate__animated animate__fadeInDown">Інструкція з участі</h2>
+        <div class="max-w-4xl mx-auto mt-12">
+            <ol class="space-y-12 text-purple-700 text-lg">
+                <!-- Крок 1 -->
+                <li class="flex items-start bg-white p-6 rounded-lg shadow-lg animate__animated animate__fadeInLeft animate__delay-1s">
+                    <div class="w-16 h-16 flex items-center justify-center bg-purple-600 text-white text-3xl font-bold rounded-full mr-6">
+                        1
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-purple-800">Обрати бажаний формат участі</h3>
+                        <p class="mt-2 text-purple-600">Виберіть той формат, який найкраще підходить для вас, враховуючи ваші цілі та зручність.</p>
+                    </div>
+                </li>
+                <!-- Крок 2 -->
+                <li class="flex items-start bg-white p-6 rounded-lg shadow-lg animate__animated animate__fadeInUp animate__delay-2s">
+                    <div class="w-16 h-16 flex items-center justify-center bg-purple-600 text-white text-3xl font-bold rounded-full mr-6">
+                        2
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-purple-800">Оплатити реєстрацію онлайн</h3>
+                        <p class="mt-2 text-purple-600">Швидка і зручна оплата через будь-який зручний для вас спосіб.</p>
+                    </div>
+                </li>
+                <!-- Крок 3 -->
+                <li class="flex items-start bg-white p-6 rounded-lg shadow-lg animate__animated animate__fadeInRight animate__delay-3s">
+                    <div class="w-16 h-16 flex items-center justify-center bg-purple-600 text-white text-3xl font-bold rounded-full mr-6">
+                        3
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-purple-800">Отримати програму тренувань і харчування</h3>
+                        <p class="mt-2 text-purple-600">Отримайте повний план, який допоможе вам досягти бажаних результатів.</p>
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- Секція запису на марафон -->
+    <section class="py-16 px-6 bg-gradient-to-r from-purple-100 via-purple-200 to-purple-100 text-purple-800" data-aos="fade-up" style="margin: 10% 0;">
+        <div class="max-w-5xl mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-6">Запишись на марафон прямо зараз!</h2>
+            <p class="text-lg mb-8">
+                Не втрать шанс змінити своє життя за 10 днів. Заповни форму та отримай доступ до тренувань, харчування та мотивації!
+            </p>
+            <!-- Кнопка -->
+            <a href="#registration-form" class="bg-white text-purple-800 font-bold py-4 px-8 rounded-full shadow-lg text-xl hover:bg-purple-100 transition-all duration-300">
+                Записатися на марафон
+            </a>
+        </div>
+
+        <!-- Форма реєстрації -->
+        <div id="registration-form" class="mt-12 bg-white rounded-lg shadow-lg max-w-3xl mx-auto p-8">
+            <h3 class="text-2xl font-bold text-purple-800 text-center mb-6">Форма реєстрації</h3>
+            <form action="#" method="POST">
+                <div class="space-y-6">
+                    <!-- Поле Ім'я -->
+                    <div>
+                        <label for="name" class="block text-purple-700 font-semibold mb-2">Ваше ім'я</label>
+                        <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-lg border-2 border-purple-200 focus:outline-none focus:ring-2 focus:ring-purple-600">
+                    </div>
+                    <!-- Поле Email -->
+                    <div>
+                        <label for="email" class="block text-purple-700 font-semibold mb-2">Ваш Email</label>
+                        <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-lg border-2 border-purple-200 focus:outline-none focus:ring-2 focus:ring-purple-600">
+                    </div>
+                    <!-- Поле Телефон -->
+                    <div>
+                        <label for="phone" class="block text-purple-700 font-semibold mb-2">Ваш телефон</label>
+                        <input type="tel" id="phone" name="phone" required class="w-full px-4 py-3 rounded-lg border-2 border-purple-200 focus:outline-none focus:ring-2 focus:ring-purple-600">
+                    </div>
+                    <!-- Кнопка Надіслати -->
+                    <div class="text-center">
+                        <button type="submit" class="bg-purple-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-purple-700 transition-all duration-300">
+                            Надіслати заявку
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Секція оплати -->
+    <section class="py-16 px-6 bg-purple-50" data-aos="fade-up">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-bold text-purple-800 mb-6">Оплата за участь у марафоні</h2>
+            <p class="text-xl text-purple-700 mb-8">Оплатіть участь у марафоні та отримайте доступ до програми. Вартість: 10 € (або 425 грн).</p>
+
+            <!-- Форми оплати -->
+            <div class="flex justify-center space-x-8">
+                <!-- Картка -->
+                <div class="bg-white p-8 rounded-lg shadow-lg w-full md:w-96">
+                    <h3 class="text-2xl font-semibold text-purple-800 mb-4">Оплата карткою</h3>
+                    <form action="#" method="POST">
+                        <div class="mb-4">
+                            <label for="cardNumber" class="block text-sm text-purple-600">Номер картки</label>
+                            <input type="text" id="cardNumber" name="cardNumber" placeholder="XXXX XXXX XXXX XXXX" class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500" required>
+                        </div>
+                        <div class="mb-4 flex space-x-4">
+                            <div class="w-1/2">
+                                <label for="expiryDate" class="block text-sm text-purple-600">Термін дії</label>
+                                <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500" required>
+                            </div>
+                            <div class="w-1/2">
+                                <label for="cvv" class="block text-sm text-purple-600">CVV</label>
+                                <input type="text" id="cvv" name="cvv" placeholder="XXX" class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="w-full bg-purple-600 hover:bg-purple-500 text-white font-bold py-3 px-6 rounded-lg transform hover:scale-105 transition-all duration-300">Оплатити</button>
+                    </form>
+                </div>
+
+                <!-- Інші методи оплати -->
+                <div class="bg-white p-8 rounded-lg shadow-lg w-full md:w-96">
+                    <h3 class="text-2xl font-semibold text-purple-800 mb-4">Інші методи оплати</h3>
+                    <ul class="space-y-4 text-left">
+                        <li class="text-lg text-purple-600">1. Приват24</li>
+                        <li class="text-lg text-purple-600">2. PayPal</li>
+                        <li class="text-lg text-purple-600">3. Оплата через термінал</li>
+                    </ul>
+                    <p class="text-sm text-gray-500 mt-4">Виберіть метод оплати, щоб продовжити.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Секція Питання та Відповіді -->
+    <section class="py-16 px-6 bg-purple-50" data-aos="fade-up" style="margin: 10% 0;">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-4xl font-bold text-center text-purple-800 mb-12">Питання та Відповіді</h2>
+            <div class="space-y-4">
+                <!-- Питання 1 -->
+                <div class="bg-white p-4 rounded-lg shadow-lg">
+                    <button 
+                        class="w-full text-left text-lg font-semibold text-purple-700 flex justify-between items-center focus:outline-none toggle-answer" 
+                        data-answer="answer1">
+                        Що входить у програму марафону?
+                        <i class="fas fa-chevron-down text-purple-600"></i>
+                    </button>
+                    <div id="answer1" class="hidden mt-4 text-purple-600">
+                        Програма включає щоденні тренування, збалансоване харчування, мотиваційні поради та підтримку.
+                    </div>
+                </div>
+                <!-- Питання 2 -->
+                <div class="bg-white p-4 rounded-lg shadow-lg">
+                    <button 
+                        class="w-full text-left text-lg font-semibold text-purple-700 flex justify-between items-center focus:outline-none toggle-answer" 
+                        data-answer="answer2">
+                        Як я можу оплатити участь?
+                        <i class="fas fa-chevron-down text-purple-600"></i>
+                    </button>
+                    <div id="answer2" class="hidden mt-4 text-purple-600">
+                        Ви можете оплатити участь онлайн через банківську карту або за допомогою інших платіжних систем.
+                    </div>
+                </div>
+                <!-- Питання 3 -->
+                <div class="bg-white p-4 rounded-lg shadow-lg">
+                    <button 
+                        class="w-full text-left text-lg font-semibold text-purple-700 flex justify-between items-center focus:outline-none toggle-answer" 
+                        data-answer="answer3">
+                        Чи потрібен мені спеціальний інвентар для тренувань?
+                        <i class="fas fa-chevron-down text-purple-600"></i>
+                    </button>
+                    <div id="answer3" class="hidden mt-4 text-purple-600">
+                        Більшість тренувань розраховані на домашні умови, і спеціальний інвентар не потрібен.
+                    </div>
+                </div>
+                <!-- Питання 4 -->
+                <div class="bg-white p-4 rounded-lg shadow-lg">
+                    <button 
+                        class="w-full text-left text-lg font-semibold text-purple-700 flex justify-between items-center focus:outline-none toggle-answer" 
+                        data-answer="answer4">
+                        Як довго триває марафон?
+                        <i class="fas fa-chevron-down text-purple-600"></i>
+                    </button>
+                    <div id="answer4" class="hidden mt-4 text-purple-600">
+                        Марафон триває 10 днів і включає інтенсивні тренування та підтримку.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Контактна інформація -->
+    <footer class="py-12 px-6 bg-purple-800 text-white" data-aos="fade-up">
+        <div class="max-w-6xl mx-auto">
+            <!-- Заголовок -->
+            <h2 class="text-3xl font-bold text-center mb-6">Контактна інформація</h2>
+    
+            <!-- Контакти -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <!-- Email -->
+                <div>
+                    <i class="fas fa-envelope text-4xl mb-4 text-purple-300"></i>
+                    <p class="text-lg">Email:</p>
+                    <a href="mailto:info@tgym.com" class="text-purple-200 hover:text-purple-400 transition">
+                        info@tgym.com
+                    </a>
+                </div>
+                <!-- Телефон -->
+                <div>
+                    <i class="fas fa-phone text-4xl mb-4 text-purple-300"></i>
+                    <p class="text-lg">Телефон:</p>
+                    <a href="tel:+380XXXXXXXXX" class="text-purple-200 hover:text-purple-400 transition">
+                        +380 (XX) XXX-XX-XX
+                    </a>
+                </div>
+                <!-- Соцмережі -->
+                <div>
+                    <i class="fas fa-share-alt text-4xl mb-4 text-purple-300"></i>
+                    <p class="text-lg">Соцмережі:</p>
+                    <div class="flex justify-center space-x-4 mt-2">
+                        <a href="#" class="text-purple-200 hover:text-purple-400 transition">
+                            <i class="fab fa-facebook-f text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-purple-200 hover:text-purple-400 transition">
+                            <i class="fab fa-instagram text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-purple-200 hover:text-purple-400 transition">
+                            <i class="fab fa-telegram-plane text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Нижня секція -->
+            <div class="mt-8 border-t border-purple-600 pt-6 text-center text-sm text-purple-300">
+                © 2024. Усі права захищено.
+            </div>
+        </div>
+    </footer>
+    
+
+    <!-- Таймер -->
+    <script>
+        const countdown = document.getElementById('countdown');
+        const targetDate = new Date('2024-01-10T00:00:00').getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+
+            if (distance < 0) {
+                countdown.textContent = 'Продажі стартували!';
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % 1000) / 1000);
+
+            countdown.textContent = `${days} днів ${hours} годин ${minutes} хвилин ${seconds} секунд`;
+        }
+
+        setInterval(updateCountdown, 1000);
+    </script>
+    <!-- JavaScript для функціоналу з плавною анімацією -->
+<!-- JavaScript для функціоналу -->
+<script>
+    document.querySelectorAll('.toggle-answer').forEach(button => {
+        button.addEventListener('click', () => {
+            const answerId = button.getAttribute('data-answer');
+            const answer = document.getElementById(answerId);
+            const icon = button.querySelector('i');
+
+            // Перемикання видимості відповіді
+            if (answer.classList.contains('hidden')) {
+                answer.classList.remove('hidden');
+                icon.classList.replace('fa-chevron-down', 'fa-chevron-up');
+            } else {
+                answer.classList.add('hidden');
+                icon.classList.replace('fa-chevron-up', 'fa-chevron-down');
+            }
+        });
+    });
+</script>
+
+
+    <!-- AOS Script -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
