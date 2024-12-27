@@ -20,8 +20,8 @@
         }
         @media (max-width: 768px) {
         header {
-            background-size: contain; /* Зображення буде повністю вміщуватися, без обрізки */
-            background-position: top center; /* Позиція фону змінена, щоб краще відображати важливі частини на мобільних екранах */
+            background-size: contain; 
+            background-position: top center; 
         }
     }
     </style>
@@ -46,13 +46,16 @@
         <!-- Основний контент -->
         <h1 class="text-5xl font-extrabold animate__animated animate__bounceIn mb-6">Марафон: Твоя перша зміна за 10 днів!</h1>
         <div class="mt-4">
-            <span class="text-3xl font-semibold">До старту продажу:</span>
-            <div id="countdown" class="text-2xl mt-2 font-bold text-yellow-400"></div>
+            <span class="text-3xl font-semibold">Продажі стартують 01.01.25!</span>
         </div>
         <button class="bg-purple-600 hover:bg-purple-400 text-white font-bold py-3 px-8 mt-8 rounded-lg transform hover:scale-110 transition-all duration-300 w-full sm:w-auto opacity-90 hover:opacity-100">
-            Дізнайтесь про старт продажів у додатку
+            Дізнайтесь про старт продажів
         </button>
     </header>
+    
+    
+    
+    
 
 
 
@@ -119,7 +122,7 @@
             <!-- Статистика учасників -->
             <div class="text-center">
                 <p class="text-4xl font-bold text-purple-700 animate__animated animate__fadeInLeft">
-                    10 000+
+                    20+
                 </p>
                 <p class="text-purple-600">Учасників</p>
             </div>
@@ -127,7 +130,7 @@
             <!-- Статистика успішних історій -->
             <div class="text-center">
                 <p class="text-4xl font-bold text-purple-700 animate__animated animate__fadeInUp">
-                    8 500
+                    15
                 </p>
                 <p class="text-purple-600">Успішних історій</p>
             </div>
@@ -135,12 +138,13 @@
             <!-- Статистика задоволених результатами -->
             <div class="text-center">
                 <p class="text-4xl font-bold text-purple-700 animate__animated animate__fadeInRight">
-                    95%
+                    85%
                 </p>
                 <p class="text-purple-600">Задоволених результатами</p>
             </div>
         </div>
-    </section>  
+    </section>
+
 
     <!-- Опис марафону -->
     <!-- <section class="py-16 px-6 bg-gradient-to-r from-purple-50 via-white to-purple-50" data-aos="fade-up" style="margin: 10% 0">
@@ -283,7 +287,7 @@
             </ol>
         </div>
     </section>
-    
+
     
 
     <!-- Секція запису на марафон -->
@@ -434,13 +438,13 @@
 
 
     <!-- Контактна інформація -->
-    <footer class="py-12 px-6 bg-purple-800 text-white" data-aos="fade-up">
+    <footer class="py-12 px-6 bg-purple-800 text-white">
         <div class="max-w-6xl mx-auto">
             <!-- Заголовок -->
             <h2 class="text-3xl font-bold text-center mb-6">Контактна інформація</h2>
-    
+
             <!-- Контакти -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
                 <!-- Email -->
                 <div>
                     <i class="fas fa-envelope text-4xl mb-4 text-purple-300"></i>
@@ -474,14 +478,15 @@
                     </div>
                 </div>
             </div>
-    
+
             <!-- Нижня секція -->
             <div class="mt-8 border-t border-purple-600 pt-6 text-center text-sm text-purple-300">
-                © 2024. Усі права захищено.
+                <p>© 2024. Усі права захищено.</p>
+                <p>Створено з любов'ю для вашого успіху!</p>
             </div>
         </div>
     </footer>
-    
+
 
     <!-- Таймер -->
     <script>
@@ -508,25 +513,25 @@
         setInterval(updateCountdown, 1000);
     </script>
     <!-- JavaScript для функціоналу з плавною анімацією -->
-<!-- JavaScript для функціоналу -->
-<script>
-    document.querySelectorAll('.toggle-answer').forEach(button => {
-        button.addEventListener('click', () => {
-            const answerId = button.getAttribute('data-answer');
-            const answer = document.getElementById(answerId);
-            const icon = button.querySelector('i');
 
-            // Перемикання видимості відповіді
-            if (answer.classList.contains('hidden')) {
-                answer.classList.remove('hidden');
-                icon.classList.replace('fa-chevron-down', 'fa-chevron-up');
-            } else {
-                answer.classList.add('hidden');
-                icon.classList.replace('fa-chevron-up', 'fa-chevron-down');
-            }
+    <script>
+        document.querySelectorAll('.toggle-answer').forEach(button => {
+            button.addEventListener('click', () => {
+                const answerId = button.getAttribute('data-answer');
+                const answer = document.getElementById(answerId);
+                const icon = button.querySelector('i');
+
+                // Перемикання видимості відповіді
+                if (answer.classList.contains('hidden')) {
+                    answer.classList.remove('hidden');
+                    icon.classList.replace('fa-chevron-down', 'fa-chevron-up');
+                } else {
+                    answer.classList.add('hidden');
+                    icon.classList.replace('fa-chevron-up', 'fa-chevron-down');
+                }
+            });
         });
-    });
-</script>
+    </script>
 
 
     <!-- AOS Script -->
